@@ -15,11 +15,12 @@ Gem::Specification.new do |s|
   s.email       = ['mruggio@bluemarblepayroll.com']
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
+  s.bindir      = 'exe'
+  s.executables = %w[]
   s.homepage    = 'https://github.com/bluemarblepayroll/tree_branch'
   s.license     = 'MIT'
 
-  s.required_ruby_version = '>= 2.3.8'
+  s.required_ruby_version = '>= 2.5'
 
   s.add_dependency('acts_as_hashable', '~>1.0')
 
